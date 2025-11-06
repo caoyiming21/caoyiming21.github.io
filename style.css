@@ -1,0 +1,200 @@
+/* Basic Reset and Smooth Scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Make Summary paragraph justified */
+.section p {
+    text-align: justify;
+    line-height: 1.7;
+    text-justify: inter-word;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #222;
+  line-height: 1.6;
+}
+
+.site-title a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.site-title {
+  margin-right: 3rem;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1f2937;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navbar li {
+  margin: 0 1.5rem;
+}
+
+.navbar a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+
+.navbar a:hover {
+  color: #60a5fa;
+}
+
+/* Sections */
+main {
+  padding-top: 70px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section {
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section h1 {
+  font-size: 1.8rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+/* Summary section layout */
+#summary .text {
+  flex: 1 1 55%;
+}
+
+#summary .image {
+  flex: 1 1 40%;
+  text-align: right;
+}
+
+#summary img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 55px; /* 新增这一行：让图片整体下移 */
+  margin-left: 35px;  /* 新增这一行：让图片整体向右移动 */
+}
+
+/* Experiments gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.experiment {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.experiment:hover {
+  transform: translateY(-5px);
+}
+
+.experiment img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Horizontal Lines */
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+/* Lists */
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  #summary .image {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  #summary img {
+    max-width: 90%;
+  }
+}
+
+/* ===== Contact Section ===== */
+#contact {
+    margin-top: 60px;
+    line-height: 1.8;
+}
+
+    #contact h1 {
+        margin-bottom: 20px;
+    }
+
+    #contact p {
+        display: block; /* 确保每个 p 单独成行 */
+        margin: 8px 0;
+        font-size: 18px;
+    }
+
+    #contact a {
+        color: #007acc; /* 稳重的蓝色链接 */
+        text-decoration: none;
+    }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
